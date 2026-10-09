@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.venv/
+.venv39/
+__pycache__/
+*.pyc
+
+# Next.js build
+.next/
+out/
+build/
+dist/
+
+# Logs & Environment
+*.log
+.env
+.env.local
+.env.production
+.DS_Store
+
+# Vercel
+.vercel

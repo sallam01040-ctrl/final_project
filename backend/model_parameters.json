@@ -1,0 +1,198 @@
+{
+  "selected_features": [
+    "Attendance",
+    "Hours_Studied",
+    "Previous_Scores",
+    "Access_to_Resources",
+    "Parental_Involvement",
+    "Tutoring_Sessions",
+    "Parental_Education_Level",
+    "Peer_Influence",
+    "Distance_from_Home",
+    "Motivation_Level",
+    "Teacher_Quality",
+    "Extracurricular_Activities",
+    "Internet_Access"
+  ],
+  "feature_metadata": {
+    "Attendance": {
+      "type": "numeric",
+      "min": 0,
+      "max": 100,
+      "default": 80,
+      "unit": "%",
+      "label": "Attendance Rate",
+      "description": "Percentage of classes attended during the academic semester."
+    },
+    "Hours_Studied": {
+      "type": "numeric",
+      "min": 1,
+      "max": 45,
+      "default": 20,
+      "unit": "hrs/wk",
+      "label": "Study Hours",
+      "description": "Total independent study hours per week outside classroom instruction."
+    },
+    "Previous_Scores": {
+      "type": "numeric",
+      "min": 0,
+      "max": 100,
+      "default": 75,
+      "unit": "pts",
+      "label": "Previous Exam Score",
+      "description": "Benchmark score achieved on the preceding qualification examination."
+    },
+    "Access_to_Resources": {
+      "type": "categorical",
+      "options": ["Low", "Medium", "High"],
+      "default": "Medium",
+      "label": "Resource Access",
+      "description": "Availability of academic materials, textbooks, and laboratory equipment."
+    },
+    "Parental_Involvement": {
+      "type": "categorical",
+      "options": ["Low", "Medium", "High"],
+      "default": "Medium",
+      "label": "Parental Involvement",
+      "description": "Engagement level of guardians in homework guidance and school communications."
+    },
+    "Tutoring_Sessions": {
+      "type": "numeric",
+      "min": 0,
+      "max": 10,
+      "default": 2,
+      "unit": "sessions/mo",
+      "label": "Tutoring Sessions",
+      "description": "Monthly one-on-one or small-group academic mentoring sessions attended."
+    },
+    "Parental_Education_Level": {
+      "type": "categorical",
+      "options": ["High School", "College", "Postgraduate"],
+      "default": "High School",
+      "label": "Parental Education",
+      "description": "Highest formal educational degree attained by the student's primary guardian."
+    },
+    "Peer_Influence": {
+      "type": "categorical",
+      "options": ["Negative", "Neutral", "Positive"],
+      "default": "Neutral",
+      "label": "Peer Influence",
+      "description": "Academic orientation and study habits prevalent in peer study circle."
+    },
+    "Distance_from_Home": {
+      "type": "categorical",
+      "options": ["Near", "Moderate", "Far"],
+      "default": "Near",
+      "label": "Campus Distance",
+      "description": "Commute proximity between student residence and the educational institution."
+    },
+    "Motivation_Level": {
+      "type": "categorical",
+      "options": ["Low", "Medium", "High"],
+      "default": "Medium",
+      "label": "Motivation Level",
+      "description": "Student's self-reported academic ambition and commitment to milestones."
+    },
+    "Teacher_Quality": {
+      "type": "categorical",
+      "options": ["Low", "Medium", "High"],
+      "default": "Medium",
+      "label": "Faculty Instruction Quality",
+      "description": "Assessed caliber of subject matter instruction and curriculum delivery."
+    },
+    "Extracurricular_Activities": {
+      "type": "categorical",
+      "options": ["No", "Yes"],
+      "default": "Yes",
+      "label": "Extracurricular Participation",
+      "description": "Regular active involvement in athletic, cultural, or collegiate student clubs."
+    },
+    "Internet_Access": {
+      "type": "categorical",
+      "options": ["No", "Yes"],
+      "default": "Yes",
+      "label": "Internet Connectivity",
+      "description": "Reliable high-speed broadband access at home for research and online assignments."
+    }
+  },
+  "ordinal_map": {
+    "Low": 0,
+    "Medium": 1,
+    "High": 2,
+    "No": 0,
+    "Yes": 1,
+    "Female": 0,
+    "Male": 1,
+    "Negative": 0,
+    "Neutral": 1,
+    "Positive": 2,
+    "Public": 0,
+    "Private": 1,
+    "Near": 0,
+    "Moderate": 1,
+    "Far": 2,
+    "High School": 0,
+    "College": 1,
+    "Postgraduate": 2
+  },
+  "modes": {
+    "Teacher_Quality": "Medium",
+    "Parental_Education_Level": "High School",
+    "Distance_from_Home": "Near"
+  },
+  "scaler_mean": [
+    79.91937925813778,
+    19.934897804693414,
+    74.99791824375473,
+    1.0967070401211203,
+    1.0874337623012869,
+    1.4909159727479182,
+    0.6905753217259651,
+    1.1858440575321727,
+    0.5073807721423165,
+    0.9082134746404239,
+    1.1905753217259651,
+    0.5940575321725965,
+    0.9244890234670704
+  ],
+  "scaler_scale": [
+    11.540925889823221,
+    5.891293901929581,
+    14.421765352350302,
+    0.7005976013081716,
+    0.6938146757457955,
+    1.219523551396003,
+    0.7766329346493427,
+    0.7546852314332215,
+    0.6723578887478024,
+    0.6947520831764996,
+    0.5976060383771535,
+    0.4910734982073467,
+    0.26421405896729444
+  ],
+  "coef": [
+    2.284026824784382,
+    1.735575738028145,
+    0.6770424014810719,
+    0.7306534592240488,
+    0.676059242843587,
+    0.5868926276712603,
+    0.37998468322541773,
+    0.39124423498287736,
+    -0.3197133712625435,
+    0.3681299926113023,
+    0.3077623074445223,
+    0.28214434026719704,
+    0.24877934469308932
+  ],
+  "intercept": 67.21347464042393,
+  "metrics": {
+    "mae": 0.598,
+    "rmse": 1.516,
+    "r2": 0.829,
+    "training_samples": 5285,
+    "test_samples": 1322,
+    "total_records": 6607,
+    "algorithm": "StandardScaler + Multiple Linear Regression"
+  }
+}
