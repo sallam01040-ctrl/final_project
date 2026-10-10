@@ -7,8 +7,18 @@ from schemas import StudentFeatures, FeatureImpact, Recommendation, PredictionRe
 class ModelService:
     def __init__(self, config_path: Optional[Path] = None):
         if config_path is None:
-            current_dir = Path(__file__).resolve().parent
-            config_path = current_dir / "model_parameters.json"
+            candidates = [
+                Path(__file__).resolve().parent / "model_parameters.json",
+                Path.cwd() / "model_parameters.json",
+                Path(__file__).resolve().parent.parent / "model_parameters.json",
+                Path(__file__).resolve().parent / "backend" / "model_parameters.json",
+            ]
+            for c in candidates:
+                if c.exists():
+                    config_path = c
+                    break
+            if config_path is None or not Path(config_path).exists():
+                config_path = Path(__file__).resolve().parent / "model_parameters.json"
         
         with open(config_path, "r", encoding="utf-8") as f:
             self.config = json.load(f)
